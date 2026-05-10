@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 02.03 - Override Material</title>
+    <title>Пример 02.03 - Переопределение материала | Example 02.03 - Override Material</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -120,12 +120,12 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, 'rotationSpeed',0,0.5);
-        gui.add(controls, 'addCube');
-        gui.add(controls, 'removeCube');
-        gui.add(controls, 'outputObjects');
-        gui.add(controls, 'numberOfObjects').listen();
-
+        gui.add(controls, 'rotationSpeed',0,0.5).name("вращенСкорость | rotationSpeed");
+        gui.add(controls, 'addCube').name("добавитьКуб | addCube");
+        gui.add(controls, 'removeCube').name("удалитьКуб | removeCube");
+        gui.add(controls, 'outputObjects').name("выводОбъектов | outputObjects");
+        gui.add(controls, 'numberOfObjects').name("числоОбъектов | numberOfObjects").listen();
+        
         render();
 
         function render() {

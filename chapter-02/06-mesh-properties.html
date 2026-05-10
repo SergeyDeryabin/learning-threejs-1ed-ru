@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 02.06 - Mesh Properties</title>
+    <title>Пример 02.06 - Свойства меша | Example 02.06 - Mesh Properties</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -121,15 +121,15 @@
 
         var gui = new dat.GUI();
 
-        guiScale = gui.addFolder('scale');
-        guiScale.add(controls,'scaleX',0,5);
-        guiScale.add(controls,'scaleY',0,5);
-        guiScale.add(controls,'scaleZ',0,5);
+        guiScale = gui.addFolder('масштаб | scale');
+        guiScale.add(controls,'scaleX',0,5).name('масштабX | scaleX');
+        guiScale.add(controls,'scaleY',0,5).name('масштабY | scaleY');
+        guiScale.add(controls,'scaleZ',0,5).name('масштабZ | scaleZ');
 
-        guiPosition = gui.addFolder('position');
-        var contX = guiPosition.add(controls,'positionX',-10,10);
-        var contY = guiPosition.add(controls,'positionY',-4,20);
-        var contZ = guiPosition.add(controls,'positionZ',-10,10);
+        guiPosition = gui.addFolder('позиция | position');
+        var contX = guiPosition.add(controls,'positionX',-10,10).name('позицияX | positionX');
+        var contY = guiPosition.add(controls,'positionY',-4,20).name('позицияY | positionY');
+        var contZ = guiPosition.add(controls,'positionZ',-10,10).name('позицияZ | scaleZ');
 
         contX.listen();
         contX.onChange(function(value) {
@@ -147,17 +147,17 @@
         });
 
 
-        guiRotation = gui.addFolder('rotation');
-        guiRotation.add(controls,'rotationX',-4,4);
-        guiRotation.add(controls,'rotationY',-4,4);
-        guiRotation.add(controls,'rotationZ',-4,4);
+        guiRotation = gui.addFolder('вращение | rotation');
+        guiRotation.add(controls,'rotationX',-4,4).name('вращениеX | rotationX');
+        guiRotation.add(controls,'rotationY',-4,4).name('вращениеY | rotationY');
+        guiRotation.add(controls,'rotationZ',-4,4).name('вращениеZ | rotationZ');
 
-        guiTranslate = gui.addFolder('translate');
+        guiTranslate = gui.addFolder('перенос | translate');
 
-        guiTranslate.add(controls,'translateX',-10,10);
-        guiTranslate.add(controls,'translateY',-10,10);
-        guiTranslate.add(controls,'translateZ',-10,10);
-        guiTranslate.add(controls,'translate');
+        guiTranslate.add(controls,'translateX',-10,10).name('переносX | translateX');
+        guiTranslate.add(controls,'translateY',-10,10).name('переносY | translateY');
+        guiTranslate.add(controls,'translateZ',-10,10).name('переносZ | translateZ');
+        guiTranslate.add(controls,'translate').name('перенести | translate');
 
         render();
 
