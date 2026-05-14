@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 03.05 - Directional Light</title>
+    <title>Пример 03.05 - Свет полушария | Example 03.05 - Hemisphere Light</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -165,16 +165,16 @@
 
         var gui = new dat.GUI();
 
-        gui.add(controls, 'hemisphere').onChange(function (e) {
+        gui.add(controls, 'hemisphere').name('полушарие | hemisphere').onChange(function (e) {
             hemiLight.visible = e;
         });
-        gui.addColor(controls, 'groundColor').onChange(function (e) {
+        gui.addColor(controls, 'groundColor').name('грунтЦвет | groundColor').onChange(function (e) {
             hemiLight.groundColor = new THREE.Color(e);
         });
-        gui.addColor(controls, 'skyColor').onChange(function (e) {
+        gui.addColor(controls, 'skyColor').name('небоЦвет | skyColor').onChange(function (e) {
             hemiLight.color = new THREE.Color(e);
         });
-        gui.add(controls, 'intensity', 0, 5).onChange(function (e) {
+        gui.add(controls, 'intensity', 0, 5).name('интенсивность | intensity').onChange(function (e) {
             hemiLight.intensity = e;
         });
 

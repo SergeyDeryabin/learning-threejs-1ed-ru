@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 03.04 - Directional Light</title>
+    <title>Пример 03.04 - Направленный свет | Example 03.04 - Directional Light</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -155,49 +155,49 @@ $(function () {
         this.debug = false;
         this.castShadow = true;
         this.onlyShadow = false;
-        this.target = "Plane";
+        this.target = "Плоскость | Plane";
 
     }
 
     var gui = new dat.GUI();
-    gui.addColor(controls, 'ambientColor').onChange(function (e) {
+    gui.addColor(controls, 'ambientColor').name('рассеянЦвет | ambientColor').onChange(function (e) {
         ambientLight.color = new THREE.Color(e);
     });
 
-    gui.addColor(controls, 'pointColor').onChange(function (e) {
+    gui.addColor(controls, 'pointColor').name('точкиЦвет | pointColor').onChange(function (e) {
         directionalLight.color = new THREE.Color(e);
     });
 
-    gui.add(controls, 'intensity', 0, 5).onChange(function (e) {
+    gui.add(controls, 'intensity', 0, 5).name('интенсивность | intensity').onChange(function (e) {
         directionalLight.intensity = e;
     });
 
-    gui.add(controls, 'distance', 0, 200).onChange(function (e) {
+    gui.add(controls, 'distance', 0, 200).name('дистанция | distance').onChange(function (e) {
         directionalLight.distance = e;
     });
 
-    gui.add(controls, 'debug').onChange(function (e) {
+    gui.add(controls, 'debug').name('отладка | debug').onChange(function (e) {
         directionalLight.shadowCameraVisible = e;
     });
 
-    gui.add(controls, 'castShadow').onChange(function (e) {
+    gui.add(controls, 'castShadow').name('отбросТень | castShadow').onChange(function (e) {
         directionalLight.castShadow = e;
     });
 
-    gui.add(controls, 'onlyShadow').onChange(function (e) {
+    gui.add(controls, 'onlyShadow').name('толькоТень | onlyShadow').onChange(function (e) {
         directionalLight.onlyShadow = e;
     });
 
-    gui.add(controls, 'target', ['Plane', 'Sphere', 'Cube']).onChange(function (e) {
+    gui.add(controls, 'target', ['Плоскость | Plane', 'Сфера | Sphere', 'Куб | Cube']).name('цель | target').onChange(function (e) {
         console.log(e);
         switch (e) {
-            case "Plane":
+            case "Плоскость | Plane":
                 directionalLight.target = plane;
                 break;
-            case "Sphere":
+            case "Сфера | Sphere":
                 directionalLight.target = sphere;
                 break;
-            case "Cube":
+            case "Куб | Cube":
                 directionalLight.target = cube;
                 break;
         }

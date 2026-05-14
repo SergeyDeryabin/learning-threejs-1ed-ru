@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 03.03 - Spot Light</title>
+    <title>Пример 03.03 - Прожекторный свет | Example 03.03 - Spot Light</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -157,7 +157,7 @@ $(function () {
         this.debug = false;
         this.castShadow = true;
         this.onlyShadow = false;
-        this.target = "Plane";
+        this.target = "Плоскость | Plane";
         this.stopMovingLight = false;
 
     }
@@ -167,55 +167,55 @@ $(function () {
         ambientLight.color = new THREE.Color(e);
     });
 
-    gui.addColor(controls, 'pointColor').onChange(function (e) {
+    gui.addColor(controls, 'pointColor').name('точкиЦвет | pointColor').onChange(function (e) {
         spotLight.color = new THREE.Color(e);
     });
 
-    gui.add(controls, 'angle', 0, Math.PI * 2).onChange(function (e) {
+    gui.add(controls, 'angle', 0, Math.PI * 2).name('угол | angle').onChange(function (e) {
         spotLight.angle = e;
     });
 
-    gui.add(controls, 'intensity', 0, 5).onChange(function (e) {
+    gui.add(controls, 'intensity', 0, 5).name('интенсивность | intensity').onChange(function (e) {
         spotLight.intensity = e;
     });
 
-    gui.add(controls, 'distance', 0, 200).onChange(function (e) {
+    gui.add(controls, 'distance', 0, 200).name('дистанция | distance').onChange(function (e) {
         spotLight.distance = e;
     });
 
-    gui.add(controls, 'exponent', 0, 100).onChange(function (e) {
+    gui.add(controls, 'exponent', 0, 100).name('экспонента | exponent').onChange(function (e) {
         spotLight.exponent = e;
     });
 
-    gui.add(controls, 'debug').onChange(function (e) {
+    gui.add(controls, 'debug').name('отладка | debug').onChange(function (e) {
         spotLight.shadowCameraVisible = e;
     });
 
-    gui.add(controls, 'castShadow').onChange(function (e) {
+    gui.add(controls, 'castShadow').name('отбросТень | castShadow').onChange(function (e) {
         spotLight.castShadow = e;
     });
 
-    gui.add(controls, 'onlyShadow').onChange(function (e) {
+    gui.add(controls, 'onlyShadow').name('толькоТень | onlyShadow').onChange(function (e) {
         spotLight.onlyShadow = e;
     });
 
-    gui.add(controls, 'target', ['Plane', 'Sphere', 'Cube']).onChange(function (e) {
+    gui.add(controls, 'target', ['Плоскость | Plane', 'Сфера | Sphere', 'Куб | Cube']).name('цель | target').onChange(function (e) {
         console.log(e);
         switch (e) {
-            case "Plane":
+            case "Плоскость | Plane":
                 spotLight.target = plane;
                 break;
-            case "Sphere":
+            case "Сфера | Sphere":
                 spotLight.target = sphere;
                 break;
-            case "Cube":
+            case "Куб | Cube":
                 spotLight.target = cube;
                 break;
         }
 
     });
 
-    gui.add(controls, 'stopMovingLight').onChange(function (e) {
+    gui.add(controls, 'stopMovingLight').name('остановДвижСвет | stopMovingLight').onChange(function (e) {
         stopMovingLight = e;
     });
 

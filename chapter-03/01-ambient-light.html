@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 03.01 - Ambient Light</title>
+    <title>Пример 03.01 - Рассеянный свет | Example 03.01 - Ambient Light</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -117,7 +117,7 @@
         }
 
         var gui = new dat.GUI();
-        gui.addColor(controls, 'ambientColor').onChange(function (e) {
+        gui.addColor(controls, 'ambientColor').name('рассеянЦвет | ambientColor').onChange(function (e) {
             ambientLight.color = new THREE.Color(e);
         });
 
