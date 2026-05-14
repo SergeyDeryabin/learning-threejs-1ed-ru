@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 04.01 - MeshBasicMaterial</title>
+    <title>Пример 04.01 - Базовый материал меша | Example 04.01 - MeshBasicMaterial</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -110,14 +110,14 @@
             this.transparent = meshMaterial.transparent;
             this.overdraw = meshMaterial.overdraw;
             this.visible = meshMaterial.visible;
-            this.side = "front";
+            this.side = "лицевая сторона | front";
 
             this.color = meshMaterial.color.getStyle();
             this.wireframe = meshMaterial.wireframe;
             this.wireframeLinewidth = meshMaterial.wireframeLinewidth;
             this.wireFrameLineJoin = meshMaterial.wireframeLinejoin;
 
-            this.selectedMesh = "cube";
+            this.selectedMesh = "куб | cube";
 
             this.switchRenderer = function () {
                 if (renderer instanceof THREE.WebGLRenderer) {
@@ -135,55 +135,55 @@
         var gui = new dat.GUI();
 
 
-        var spGui = gui.addFolder("Mesh");
-        spGui.add(controls, 'opacity', 0, 1).onChange(function (e) {
+        var spGui = gui.addFolder("Мешь | Mesh");
+        spGui.add(controls, 'opacity', 0, 1).name('непрозрачность | topacity').onChange(function (e) {
             meshMaterial.opacity = e
         });
-        spGui.add(controls, 'transparent').onChange(function (e) {
+        spGui.add(controls, 'transparent').name('прозрачный | transparent').onChange(function (e) {
             meshMaterial.transparent = e
         });
-        spGui.add(controls, 'wireframe').onChange(function (e) {
+        spGui.add(controls, 'wireframe').name('каркас | wireframe').onChange(function (e) {
             meshMaterial.wireframe = e
         });
-        spGui.add(controls, 'wireframeLinewidth', 0, 20).onChange(function (e) {
+        spGui.add(controls, 'wireframeLinewidth', 0, 20).name('каркаснаяШиринаЛинии | wireframeLinewidth').onChange(function (e) {
             meshMaterial.wireframeLinewidth = e
         });
-        spGui.add(controls, 'visible').onChange(function (e) {
+        spGui.add(controls, 'visible').name('видимый | visible').onChange(function (e) {
             meshMaterial.visible = e
         });
-        spGui.add(controls, 'side', ["front", "back", "double" ]).onChange(function (e) {
+        spGui.add(controls, 'side', ["лицевая сторона | front", "изнаночная сторона | back", "обе стороны | double" ]).name('сторона | side').onChange(function (e) {
             console.log(e);
             switch (e) {
-                case "front":
+                case "лицевая сторона | front":
                     meshMaterial.side = THREE.FrontSide;
                     break;
-                case "back":
+                case "изнаночная сторона | back":
                     meshMaterial.side = THREE.BackSide;
                     break;
-                case "double":
+                case "обе стороны | double":
                     meshMaterial.side = THREE.DoubleSide
                     break;
             }
             meshMaterial.needsUpdate = true;
             console.log(meshMaterial);
         });
-        spGui.addColor(controls, 'color').onChange(function (e) {
+        spGui.addColor(controls, 'color').name('цвет | color').onChange(function (e) {
             meshMaterial.color.setStyle(e)
         });
-        spGui.add(controls, 'selectedMesh', ["cube", "sphere", "plane"]).onChange(function (e) {
+        spGui.add(controls, 'selectedMesh', ["куб | cube", "сфера | sphere", "плоскость | plane"]).name('выбранныйМешь | selectedMesh').onChange(function (e) {
 
             scene.remove(plane);
             scene.remove(cube);
             scene.remove(sphere);
 
             switch (e) {
-                case "cube":
+                case "куб | cube":
                     scene.add(cube);
                     break;
-                case "sphere":
+                case "сфера | sphere":
                     scene.add(sphere);
                     break;
-                case "plane":
+                case "плоскость | plane":
                     scene.add(plane);
                     break;
 
@@ -192,12 +192,12 @@
             scene.add(e);
         });
 
-        gui.add(controls, 'switchRenderer');
-        var cvGui = gui.addFolder("Canvas renderer");
-        cvGui.add(controls, 'overdraw').onChange(function (e) {
+        gui.add(controls, 'switchRenderer').name('переключитьРендер | switchRenderer');
+        var cvGui = gui.addFolder("Рендер на холст | Canvas renderer");
+        cvGui.add(controls, 'overdraw').name('перечертить | overdraw').onChange(function (e) {
             meshMaterial.overdraw = e
         });
-        cvGui.add(controls, 'wireFrameLineJoin', ['round', 'bevel', 'miter']).onChange(function (e) {
+        cvGui.add(controls, 'wireFrameLineJoin', ['round', 'bevel', 'miter']).name('объединитьЛинииКаркаса | wireFrameLineJoin').onChange(function (e) {
             meshMaterial.wireframeLinejoin = e
         });
 
