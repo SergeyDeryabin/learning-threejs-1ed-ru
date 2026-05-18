@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 05.07 - Basic 3D geometries - Cylinder</title>
+    <title>Пример 05.06 - Базовая 3D-геометрия - Цилиндр | Example 05.06 - Basic 3D geometries - Cylinder</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -86,12 +86,12 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, 'radiusTop', -40, 40).onChange(controls.redraw);
-        gui.add(controls, 'radiusBottom', -40, 40).onChange(controls.redraw);
-        gui.add(controls, 'height', 0, 40).onChange(controls.redraw);
-        gui.add(controls, 'segmentsX', 1, 20).step(1).onChange(controls.redraw);
-        gui.add(controls, 'segmentsY', 1, 20).step(1).onChange(controls.redraw);
-        gui.add(controls, 'openEnded').onChange(controls.redraw);
+        gui.add(controls, 'radiusTop', -40, 40).name('радиусВерх | radiusTop').onChange(controls.redraw);
+        gui.add(controls, 'radiusBottom', -40, 40).name('радиусНиз | radiusBottom').onChange(controls.redraw);
+        gui.add(controls, 'height', 0, 40).name('высота | height').onChange(controls.redraw);
+        gui.add(controls, 'segmentsX', 1, 20).name('сегментыX | segmentsX').step(1).onChange(controls.redraw);
+        gui.add(controls, 'segmentsY', 1, 20).name('сегментыY | segmentsY').step(1).onChange(controls.redraw);
+        gui.add(controls, 'openEnded').name('открытыйТорец | openEnded').onChange(controls.redraw);
 
 
         render();

@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 05.02 - Basic 2D geometries - Circle</title>
+    <title>Пример 05.02 - Базовая 2D-геометрия - Круг | Example 05.02 - Basic 2D geometries - Circle</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -91,12 +91,12 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, 'radius', 0, 40).onChange(controls.redraw);
-        gui.add(controls, 'segments', 0, 40).onChange(controls.redraw);
+        gui.add(controls, 'radius', 0, 40).name('радиус | radius').onChange(controls.redraw);
+        gui.add(controls, 'segments', 0, 40).name('сегменты | segments').onChange(controls.redraw);
         ;
-        gui.add(controls, 'thetaStart', 0, 2 * Math.PI).onChange(controls.redraw);
+        gui.add(controls, 'thetaStart', 0, 2 * Math.PI).name('Начало теты | thetaStart').onChange(controls.redraw);
         ;
-        gui.add(controls, 'thetaLength', 0, 2 * Math.PI).onChange(controls.redraw);
+        gui.add(controls, 'thetaLength', 0, 2 * Math.PI).name('Длина теты | thetaLength').onChange(controls.redraw);
         ;
 
 

@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 05.09 - Basic 3D geometries - Polyhedron</title>
+    <title>Пример 05.09 - Базовая 3D-геометрия - Многогранник | Example 05.09 - Basic 3D geometries - Polyhedron</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -66,7 +66,7 @@
             // we need the first child, since it's a multimaterial
             this.radius = 10;
             this.detail = 0;
-            this.type = 'Icosahedron';
+            this.type = 'Икосаэдр | Icosahedron';
 
 
             this.redraw = function () {
@@ -75,16 +75,16 @@
                 // create a new one
 
                 switch (controls.type) {
-                    case 'Icosahedron':
+                    case 'Икосаэдр | Icosahedron':
                         polyhedron = createMesh(new THREE.IcosahedronGeometry(controls.radius, controls.detail));
                         break;
-                    case 'Tetrahedron':
+                    case 'Тетраэдр | Tetrahedron':
                         polyhedron = createMesh(new THREE.TetrahedronGeometry(controls.radius, controls.detail));
                         break;
-                    case 'Octahedron':
+                    case 'Октаэдр | Octahedron':
                         polyhedron = createMesh(new THREE.OctahedronGeometry(controls.radius, controls.detail));
                         break;
-                    case 'Custom':
+                    case 'Нестандарт | Custom':
                         var vertices = [
                             [ 1, 0, 1 ],
                             [ 1, 0, -1 ],
@@ -111,9 +111,9 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, 'radius', 0, 40).step(1).onChange(controls.redraw);
-        gui.add(controls, 'detail', 0, 3).step(1).onChange(controls.redraw);
-        gui.add(controls, 'type', ['Icosahedron', 'Tetrahedron', 'Octahedron', 'Custom']).onChange(controls.redraw);
+        gui.add(controls, 'radius', 0, 40).name('радиус | radius').step(1).onChange(controls.redraw);
+        gui.add(controls, 'detail', 0, 3).name('деталь | detail').step(1).onChange(controls.redraw);
+        gui.add(controls, 'type', ['Икосаэдр | Icosahedron', 'Тетраэдр | Tetrahedron', 'Октаэдр | Octahedron', 'Нестандарт | Custom']).name('тип | type').onChange(controls.redraw);
 
 
         render();
