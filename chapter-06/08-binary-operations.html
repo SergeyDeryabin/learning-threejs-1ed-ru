@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 06.08 - Binary operations</title>
+    <title>Пример 06.08 - Бинарные операции | Example 06.08 - Binary operations</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -99,8 +99,8 @@ $(function () {
         this.scaleY = 1;
         this.scaleZ = 1;
 
-        this.actionCube = "subtract"; // add, substract, intersect
-        this.actionSphere = "subtract"
+        this.actionCube = "вычесть | subtract"; // add, substract, intersect
+        this.actionSphere = "вычесть | subtract"
 
         this.showResult = function () {
             redrawResult();
@@ -113,59 +113,59 @@ $(function () {
     }
 
     var gui = new dat.GUI();
-    var guiSphere1 = gui.addFolder("Sphere1");
-    guiSphere1.add(controls, "sphere1PosX", -15, 15).onChange(function () {
+    var guiSphere1 = gui.addFolder("Сфера 1 | Sphere1");
+    guiSphere1.add(controls, "sphere1PosX", -15, 15).name("сфера1ПозX | sphere1PosX").onChange(function () {
         sphere1.position.set(controls.sphere1PosX, controls.sphere1PosY, controls.sphere1PosZ)
     });
-    guiSphere1.add(controls, "sphere1PosY", -15, 15).onChange(function () {
+    guiSphere1.add(controls, "sphere1PosY", -15, 15).name("сфера1ПозY | sphere1PosY").onChange(function () {
         sphere1.position.set(controls.sphere1PosX, controls.sphere1PosY, controls.sphere1PosZ)
     });
-    guiSphere1.add(controls, "sphere1PosZ", -15, 15).onChange(function () {
+    guiSphere1.add(controls, "sphere1PosZ", -15, 15).name("сфера1ПозZ | sphere1PosZ").onChange(function () {
         sphere1.position.set(controls.sphere1PosX, controls.sphere1PosY, controls.sphere1PosZ)
     });
-    guiSphere1.add(controls, "sphere1Scale", 0, 10).onChange(function (e) {
+    guiSphere1.add(controls, "sphere1Scale", 0, 10).name("сфера1Масштаб | sphere1Scale").onChange(function (e) {
         sphere1.scale.set(e, e, e)
     });
 
-    var guiSphere2 = gui.addFolder("Sphere2");
-    guiSphere2.add(controls, "sphere2PosX", -15, 15).onChange(function () {
+    var guiSphere2 = gui.addFolder("Сфера 2 | Sphere2");
+    guiSphere2.add(controls, "sphere2PosX", -15, 15).name("сфера2ПозX | sphere2PosX").onChange(function () {
         sphere2.position.set(controls.sphere2PosX, controls.sphere2PosY, controls.sphere2PosZ)
     });
-    guiSphere2.add(controls, "sphere2PosY", -15, 15).onChange(function () {
+    guiSphere2.add(controls, "sphere2PosY", -15, 15).name("сфера2ПозY | sphere2PosY").onChange(function () {
         sphere2.position.set(controls.sphere2PosX, controls.sphere2PosY, controls.sphere2PosZ)
     });
-    guiSphere2.add(controls, "sphere2PosZ", -15, 15).onChange(function () {
+    guiSphere2.add(controls, "sphere2PosZ", -15, 15).name("сфера2ПозZ | sphere2PosZ").onChange(function () {
         sphere2.position.set(controls.sphere2PosX, controls.sphere2PosY, controls.sphere2PosZ)
     });
-    guiSphere2.add(controls, "sphere2Scale", 0, 10).onChange(function (e) {
+    guiSphere2.add(controls, "sphere2Scale", 0, 10).name("сфера2Масштаб | sphere2Scale").onChange(function (e) {
         sphere2.scale.set(e, e, e)
     });
-    guiSphere2.add(controls, "actionSphere", ["subtract", "intersect", "union", "none"]);
-
-    var guiCube = gui.addFolder("cube");
-    guiCube.add(controls, "cubePosX", -15, 15).onChange(function () {
+    guiSphere2.add(controls, "actionSphere", ["вычесть | subtract", "пересечь | intersect", "объединить | union", "нет | none"]).name("действиеСфера | actionSphere");
+ 
+    var guiCube = gui.addFolder("куб | cube");
+    guiCube.add(controls, "cubePosX", -15, 15).name("кубПозX | cubePosX").onChange(function () {
         cube.position.set(controls.cubePosX, controls.cubePosY, controls.cubePosZ)
     });
-    guiCube.add(controls, "cubePosY", -15, 15).onChange(function () {
+    guiCube.add(controls, "cubePosY", -15, 15).name("кубПозY | cubePosY").onChange(function () {
         cube.position.set(controls.cubePosX, controls.cubePosY, controls.cubePosZ)
     });
-    guiCube.add(controls, "cubePosZ", -15, 15).onChange(function () {
+    guiCube.add(controls, "cubePosZ", -15, 15).name("кубПозZ | cubePosZ").onChange(function () {
         cube.position.set(controls.cubePosX, controls.cubePosY, controls.cubePosZ)
     });
-    guiCube.add(controls, "scaleX", 0, 10).onChange(function (e) {
+    guiCube.add(controls, "scaleX", 0, 10).name("масштабX | scaleX").onChange(function (e) {
         cube.scale.x = e
     });
-    guiCube.add(controls, "scaleY", 0, 10).onChange(function (e) {
+    guiCube.add(controls, "scaleY", 0, 10).name("масштабY | scaleY").onChange(function (e) {
         cube.scale.y = e
     });
-    guiCube.add(controls, "scaleZ", 0, 10).onChange(function (e) {
+    guiCube.add(controls, "scaleZ", 0, 10).name("масштабZ | scaleZ").onChange(function (e) {
         cube.scale.z = e
     });
-    guiCube.add(controls, "actionCube", ["subtract", "intersect", "union", "none"]);
+    guiCube.add(controls, "actionCube", ["вычесть | subtract", "пересечь | intersect", "объединить | union", "нет | none"]).name("действиеКУб | actionCube");
 
-    gui.add(controls, "showResult");
-    gui.add(controls, "rotateResult");
-    gui.add(controls, "hideWireframes").onChange(function () {
+    gui.add(controls, "showResult").name("показатьРезультат | showResult");
+    gui.add(controls, "rotateResult").name("вращатьРезультат | rotateResult");
+    gui.add(controls, "hideWireframes").name("скрытьКаркасы | hideWireframes").onChange(function () {
         if (controls.hideWireframes) {
             sphere1.material.visible = false;
             sphere2.material.visible = false;

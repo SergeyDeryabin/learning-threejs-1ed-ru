@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 06.07 - Text geometry</title>
+    <title>Пример 06.07 - Геометрия текста | Example 06.07 - Text geometry</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -121,17 +121,17 @@
         }
 
         controls.asGeom();
-
+      
         var gui = new dat.GUI();
-        gui.add(controls, 'size', 0, 200).onChange(controls.asGeom);
-        gui.add(controls, 'height', 0, 200).onChange(controls.asGeom);
-        gui.add(controls, 'font', ['bitstream vera sans mono', 'helvetiker']).onChange(controls.asGeom);
-        gui.add(controls, 'bevelThickness', 0, 10).onChange(controls.asGeom);
-        gui.add(controls, 'bevelSize', 0, 10).onChange(controls.asGeom);
-        gui.add(controls, 'bevelSegments', 0, 30).step(1).onChange(controls.asGeom);
-        gui.add(controls, 'bevelEnabled').onChange(controls.asGeom);
-        gui.add(controls, 'curveSegments', 1, 30).step(1).onChange(controls.asGeom);
-        gui.add(controls, 'steps', 1, 5).step(1).onChange(controls.asGeom);
+        gui.add(controls, 'size', 0, 200).name('размер | size').onChange(controls.asGeom);
+        gui.add(controls, 'height', 0, 200).name('высота | height').onChange(controls.asGeom);
+        gui.add(controls, 'font', ['bitstream vera sans mono', 'helvetiker']).name('шрифт | font').onChange(controls.asGeom);
+        gui.add(controls, 'bevelThickness', 0, 10).name('скосТолщина | bevelThickness').onChange(controls.asGeom);
+        gui.add(controls, 'bevelSize', 0, 10).name('скосРазмер | bevelSize').onChange(controls.asGeom);
+        gui.add(controls, 'bevelSegments', 0, 30).name('скосСегменты | bevelSegments').step(1).onChange(controls.asGeom);
+        gui.add(controls, 'bevelEnabled').name('скосВключен | bevelEnabled').onChange(controls.asGeom);
+        gui.add(controls, 'curveSegments', 1, 30).name('криваяСегменты | curveSegments').step(1).onChange(controls.asGeom);
+        gui.add(controls, 'steps', 1, 5).name('шаги | steps').step(1).onChange(controls.asGeom);
 
 
         render();

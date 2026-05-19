@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 06.02 - Advanced 3D geometries - Lathe</title>
+    <title>Пример 06.02 - Сложная 3D-геометрия - Выточенная оболочка | Example 06.02 - Advanced 3D geometries - Lathe</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -79,9 +79,9 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, 'segments', 0, 50).step(1).onChange(controls.redraw);
-        gui.add(controls, 'phiStart', 0, 2 * Math.PI).onChange(controls.redraw);
-        gui.add(controls, 'phiLength', 0, 2 * Math.PI).onChange(controls.redraw);
+        gui.add(controls, 'segments', 0, 50).name('сегменты | segments').step(1).onChange(controls.redraw);
+        gui.add(controls, 'phiStart', 0, 2 * Math.PI).name('Начало фи | phiStart').onChange(controls.redraw);
+        gui.add(controls, 'phiLength', 0, 2 * Math.PI).name('Длина фи | phiLength').onChange(controls.redraw);
 
 
         render();

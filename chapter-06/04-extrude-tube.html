@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 06.04 - Extrude TubeGeometry</title>
+    <title>Пример 06.04 - Выдавливание геометрии трубы | Example 06.04 - Extrude TubeGeometry</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -95,12 +95,12 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, 'newPoints');
-        gui.add(controls, 'numberOfPoints', 2, 15).step(1).onChange(controls.newPoints);
-        gui.add(controls, 'segments', 0, 200).step(1).onChange(controls.redraw);
-        gui.add(controls, 'radius', 0, 10).onChange(controls.redraw);
-        gui.add(controls, 'radiusSegments', 0, 100).step(1).onChange(controls.redraw);
-        gui.add(controls, 'closed').onChange(controls.redraw);
+        gui.add(controls, 'newPoints').name('новыеТочки | newPoints');
+        gui.add(controls, 'numberOfPoints', 2, 15).name('числоТочек | numberOfPoints').step(1).onChange(controls.newPoints);
+        gui.add(controls, 'segments', 0, 200).name('сегменты | segments').step(1).onChange(controls.redraw);
+        gui.add(controls, 'radius', 0, 10).name('радиус | radius').onChange(controls.redraw);
+        gui.add(controls, 'radiusSegments', 0, 100).name('радиусСегментов | radiusSegments').step(1).onChange(controls.redraw);
+        gui.add(controls, 'closed').name('закрыто | closed').onChange(controls.redraw);
 
 
         controls.newPoints();
