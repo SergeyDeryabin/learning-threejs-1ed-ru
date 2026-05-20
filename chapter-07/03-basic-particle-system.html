@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 07.03 - Particle Basic Material</title>
+    <title>Пример 07.03 - Базовый материал частиц | Example 07.03 - Particle Basic Material</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -72,13 +72,13 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, 'size', 0, 10).onChange(controls.redraw);
-        gui.add(controls, 'transparent').onChange(controls.redraw);
-        gui.add(controls, 'opacity', 0, 1).onChange(controls.redraw);
-        gui.add(controls, 'vertexColors').onChange(controls.redraw);
-        gui.addColor(controls, 'color').onChange(controls.redraw);
-        gui.add(controls, 'sizeAttenuation').onChange(controls.redraw);
-        gui.add(controls, 'rotateSystem');
+        gui.add(controls, 'size', 0, 10).name('размер | size').onChange(controls.redraw);
+        gui.add(controls, 'transparent').name('прозрачность | transparent').onChange(controls.redraw);
+        gui.add(controls, 'opacity', 0, 1).name('непрозрачность | opacity').onChange(controls.redraw);
+        gui.add(controls, 'vertexColors').name('ЦветаВершин | vertexColors').onChange(controls.redraw);
+        gui.addColor(controls, 'color').name('цвет | color').onChange(controls.redraw);
+        gui.add(controls, 'sizeAttenuation').name('размерЗатухание | sizeAttenuation').onChange(controls.redraw);
+        gui.add(controls, 'rotateSystem').name('вращатьСистема | rotateSystem');
 
         controls.redraw();
         render();

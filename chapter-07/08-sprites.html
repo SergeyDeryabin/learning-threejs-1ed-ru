@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 07.08 - Particles - Sprites</title>
+    <title>Пример 07.08 - Частицы - Спрайты | Example 07.08 - Particles - Sprites</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -82,12 +82,12 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, 'sprite', 0, 4).step(1).onChange(controls.redraw);
-        gui.add(controls, 'size', 0, 120).onChange(controls.redraw);
-        gui.add(controls, 'transparent').onChange(controls.redraw);
-        gui.add(controls, 'opacity', 0, 1).onChange(controls.redraw);
-        gui.addColor(controls, 'color').onChange(controls.redraw);
-        gui.add(controls, 'sizeAttenuation').onChange(controls.redraw);
+        gui.add(controls, 'sprite', 0, 4).name('спрайт | sprite').step(1).onChange(controls.redraw);
+        gui.add(controls, 'size', 0, 120).name('размер | size').onChange(controls.redraw);
+        gui.add(controls, 'transparent').name('прозрачность | transparent').onChange(controls.redraw);
+        gui.add(controls, 'opacity', 0, 1).name('непрозрачность | opacity').onChange(controls.redraw);
+        gui.addColor(controls, 'color').name('цвет | color').onChange(controls.redraw);
+        gui.add(controls, 'sizeAttenuation').name('размерЗатухание | sizeAttenuation').onChange(controls.redraw);
 
         controls.redraw();
 

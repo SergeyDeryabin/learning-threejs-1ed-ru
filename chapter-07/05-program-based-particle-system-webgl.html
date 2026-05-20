@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 07.05 - Particles - Canvas based texture - WebGL</title>
+    <title>Пример 07.05 - Частицы - Текстура на базе холста - WebGL | Example 07.05 - Particles - Canvas based texture - WebGL</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -124,15 +124,16 @@
                 createParticles(controls.size, controls.transparent, controls.opacity, controls.sizeAttenuation, controls.color);
             };
         }
-
+        
+       
         var gui = new dat.GUI();
-        gui.add(controls, 'size', 0, 20).onChange(controls.redraw);
-        gui.add(controls, 'transparent').onChange(controls.redraw);
-        gui.add(controls, 'opacity', 0, 1).onChange(controls.redraw);
-        gui.addColor(controls, 'color').onChange(controls.redraw);
-        gui.add(controls, 'sizeAttenuation').onChange(controls.redraw);
+        gui.add(controls, 'size', 0, 20).name('размер | size').onChange(controls.redraw);
+        gui.add(controls, 'transparent').name('прозрачность | transparent').onChange(controls.redraw);
+        gui.add(controls, 'opacity', 0, 1).name('непрозрачность | opacity').onChange(controls.redraw);
+        gui.addColor(controls, 'color').name('цвет | color').onChange(controls.redraw);
+        gui.add(controls, 'sizeAttenuation').name('размерЗатухание | sizeAttenuation').onChange(controls.redraw);
 
-        gui.add(controls, 'rotateSystem');
+        gui.add(controls, 'rotateSystem').name('вращатьСистема | rotateSystem');
 
         controls.redraw();
 

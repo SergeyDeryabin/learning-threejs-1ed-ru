@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 07.10 - 3D Torusknot</title>
+    <title>Пример 07.10 - Торускнот 3D модель(как частицы) | Example 07.10 - 3D Torusknot</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -90,16 +90,17 @@
 
         }
 
+
         var gui = new dat.GUI();
-        gui.add(controls, 'radius', 0, 40).onChange(controls.redraw);
-        gui.add(controls, 'tube', 0, 40).onChange(controls.redraw);
-        gui.add(controls, 'radialSegments', 0, 400).step(1).onChange(controls.redraw);
-        gui.add(controls, 'tubularSegments', 1, 20).step(1).onChange(controls.redraw);
+        gui.add(controls, 'radius', 0, 40).name('радиус | radius').onChange(controls.redraw);
+        gui.add(controls, 'tube', 0, 40).name('трубка | tube').onChange(controls.redraw);
+        gui.add(controls, 'radialSegments', 0, 400).name('радиальныеСегменты | radialSegments').step(1).onChange(controls.redraw);
+        gui.add(controls, 'tubularSegments', 1, 20).name('трубчатыеСегменты | tubularSegments').step(1).onChange(controls.redraw);
         gui.add(controls, 'p', 1, 10).step(1).onChange(controls.redraw);
         gui.add(controls, 'q', 1, 15).step(1).onChange(controls.redraw);
-        gui.add(controls, 'heightScale', 0, 5).onChange(controls.redraw);
-        gui.add(controls, 'asParticles').onChange(controls.redraw);
-        gui.add(controls, 'rotate').onChange(controls.redraw);
+        gui.add(controls, 'heightScale', 0, 5).name('высотаМасштаб | heightScale').onChange(controls.redraw);
+        gui.add(controls, 'asParticles').name('какЧастицы | asParticles').onChange(controls.redraw);
+        gui.add(controls, 'rotate').name('вращать |rotate').onChange(controls.redraw);
 
         controls.redraw();
 
