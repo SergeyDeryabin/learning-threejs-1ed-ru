@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 08.02 - Merge objects</title>
+    <title>Пример 08.02 - Слияние объектов | Example 08.02 - Merge objects</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -100,9 +100,9 @@
 
         var gui = new dat.GUI();
 
-        gui.add(controls, 'numberOfObjects', 0, 20000);
-        gui.add(controls, 'combined').onChange(controls.redraw);
-        gui.add(controls, 'redraw');
+        gui.add(controls, 'numberOfObjects', 0, 20000).name('число Объектов | numberOfObjects');
+        gui.add(controls, 'combined').name('объединенный | combined').onChange(controls.redraw);
+        gui.add(controls, 'redraw').name('перерисовать | redraw');
 
 
         controls.redraw();

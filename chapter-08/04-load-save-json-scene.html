@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 08.04 - Load and save scene</title>
+    <title>Пример 08.04 - Загрузить и сохранить сцену | Example 08.04 - Load and save scene</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/SceneExporter.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
@@ -133,9 +133,9 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, "exportScene");
-        gui.add(controls, "clearScene");
-        gui.add(controls, "importScene");
+        gui.add(controls, "exportScene").name("экспортироватьСцену | exportScene");
+        gui.add(controls, "clearScene").name("очиститьСцену | clearScene");
+        gui.add(controls, "importScene").name("импортироватьСцену | importScene");
 
 
         render();

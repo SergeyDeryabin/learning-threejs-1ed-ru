@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 08.03 - Save & Load</title>
+    <title>Пример 08.03 - Сохранить & Загрузить | Example 08.03 - Save & Load</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/GeometryExporter.js"></script>
     <script type="text/javascript" src="../libs/JSONLoader.js"></script>
@@ -111,19 +111,19 @@
         }
 
         var gui = new dat.GUI();
-        var ioGui = gui.addFolder('Save & Load');
-        ioGui.add(controls, 'save').onChange(controls.save);
-        ioGui.add(controls, 'load').onChange(controls.load);
+        var ioGui = gui.addFolder('Сохранить & Загрузить | Save & Load');
+        ioGui.add(controls, 'save').name('cохранить | save').onChange(controls.save);
+        ioGui.add(controls, 'load').name('загрузить | load').onChange(controls.load);
         ;
 
-        var meshGui = gui.addFolder('mesh');
-        meshGui.add(controls, 'radius', 0, 40).onChange(controls.redraw);
-        meshGui.add(controls, 'tube', 0, 40).onChange(controls.redraw);
-        meshGui.add(controls, 'radialSegments', 0, 400).step(1).onChange(controls.redraw);
-        meshGui.add(controls, 'tubularSegments', 1, 20).step(1).onChange(controls.redraw);
+        var meshGui = gui.addFolder('мешь | mesh');
+        meshGui.add(controls, 'radius', 0, 40).name('радиус | radius').onChange(controls.redraw);
+        meshGui.add(controls, 'tube', 0, 40).name('трубка| tube').onChange(controls.redraw);
+        meshGui.add(controls, 'radialSegments', 0, 400).name('радиальныеСегменты | radialSegments').step(1).onChange(controls.redraw);
+        meshGui.add(controls, 'tubularSegments', 1, 20).name('трубчатыеСегменты | tubularSegments').step(1).onChange(controls.redraw);
         meshGui.add(controls, 'p', 1, 10).step(1).onChange(controls.redraw);
         meshGui.add(controls, 'q', 1, 15).step(1).onChange(controls.redraw);
-        meshGui.add(controls, 'heightScale', 0, 5).onChange(controls.redraw);
+        meshGui.add(controls, 'heightScale', 0, 5).name('высотаМасштаб | heightScale').onChange(controls.redraw);
 
 
         render();
