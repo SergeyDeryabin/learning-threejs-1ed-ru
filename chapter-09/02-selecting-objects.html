@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 09.02 - Selecting objects</title>
+    <title>Пример 09.02 - Выбор объектов | Example 09.02 - Selecting objects</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -125,12 +125,12 @@
             this.scalingSpeed = 0.03;
             this.showRay = false;
         }
-
+        
         var gui = new dat.GUI();
-        gui.add(controls, 'rotationSpeed', 0, 0.5);
-        gui.add(controls, 'bouncingSpeed', 0, 0.5);
-        gui.add(controls, 'scalingSpeed', 0, 0.5);
-        gui.add(controls, 'showRay').onChange(function (e) {
+        gui.add(controls, 'rotationSpeed', 0, 0.5).name('вращенСкорость | rotationSpeed');
+        gui.add(controls, 'bouncingSpeed', 0, 0.5).name('отскокСкорость | bouncingSpeed');
+        gui.add(controls, 'scalingSpeed', 0, 0.5).name('масштабСкорость | scalingSpeed');
+        gui.add(controls, 'showRay').name('показРэя | showRay').onChange(function (e) {
             if (tube) scene.remove(tube)
         });
 

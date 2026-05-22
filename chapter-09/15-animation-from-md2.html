@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 09.15 - animation from md2 </title>
+    <title>Пример 09.15 - Анимация из md2 | Example 09.15 - Animation from md2</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -100,10 +100,10 @@
                 animLabels.push(key);
             }
 
-            gui.add(controls, 'animations', animLabels).onChange(function (e) {
+            gui.add(controls, 'animations', animLabels).name('анимации | animations').onChange(function (e) {
                 mesh.playAnimation(controls.animations, controls.fps);
             });
-            gui.add(controls, 'fps', 1, 20).step(1).onChange(function (e) {
+            gui.add(controls, 'fps', 1, 20).name('кадров в секунду | fps').step(1).onChange(function (e) {
                 mesh.playAnimation(controls.animations, controls.fps);
             });
             mesh.playAnimation('crattack', 10);

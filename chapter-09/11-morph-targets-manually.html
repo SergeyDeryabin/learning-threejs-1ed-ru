@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 09.11 - Manual morph targets</title>
+    <title>Пример 09.11 - Ручные цели морфа | Example 09.11 - Manual morph targets</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -115,8 +115,8 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, 'influence1', 0, 1).onChange(controls.update);
-        gui.add(controls, 'influence2', 0, 1).onChange(controls.update);
+        gui.add(controls, 'influence1', 0, 1).name('влияние1 | influence1').onChange(controls.update);
+        gui.add(controls, 'influence2', 0, 1).name('влияние2 | influence2').onChange(controls.update);
 
 
         render();

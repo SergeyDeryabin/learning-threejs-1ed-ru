@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 09.10 - Working with morph targets</title>
+    <title>Пример 09.10 - Работа с целями морфа | Example 09.10 - Working with morph targets</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -70,7 +70,7 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, "keyframe", 0, 15).step(1).onChange(function (e) {
+        gui.add(controls, "keyframe", 0, 15).name("ключевой кадр | keyframe").step(1).onChange(function (e) {
             showFrame(e);
         });
         var mesh;
