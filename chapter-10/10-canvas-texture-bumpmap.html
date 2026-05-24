@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 10.10 - Canvas texture bumpmap</title>
+    <title>Пример 10.10 - Рельеф текстуры холста | Example 10.10 - Canvas texture bumpmap</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -120,10 +120,10 @@
             }
         };
 
-
+ 
         var gui = new dat.GUI();
-        gui.add(controls, "regenerateMap");
-        gui.add(controls, "bumpScale", -2, 2).onChange(controls.updateScale);
+        gui.add(controls, "regenerateMap").name("регенерируйтеКарту | regenerateMap");
+        gui.add(controls, "bumpScale", -2, 2).name("рельефМасштаб | bumpScale").onChange(controls.updateScale);
 
 
         render();

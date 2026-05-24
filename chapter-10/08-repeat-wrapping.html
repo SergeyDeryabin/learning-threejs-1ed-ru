@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 10.08 - Repeat mapping</title>
+    <title>Пример 10.08 - Повторить наложение | Example 10.08 - Repeat mapping</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -105,9 +105,9 @@
 
 
         var gui = new dat.GUI();
-        gui.add(controls, "repeatX", -4, 4).onChange(controls.updateRepeat);
-        gui.add(controls, "repeatY", -4, 4).onChange(controls.updateRepeat);
-        gui.add(controls, "repeatWrapping").onChange(controls.updateRepeat);
+        gui.add(controls, "repeatX", -4, 4).name("повторX | repeatX").onChange(controls.updateRepeat);
+        gui.add(controls, "repeatY", -4, 4).name("повторY | repeatY").onChange(controls.updateRepeat);
+        gui.add(controls, "repeatWrapping").name("повторОбертывания | repeatWrapping").onChange(controls.updateRepeat);
 
 
         render();

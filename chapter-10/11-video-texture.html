@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 10.11 - Video texture</title>
+    <title>Пример 10.11 - Видео текстура | Example 10.11 - Video texture</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -106,8 +106,8 @@
 
 
         var gui = new dat.GUI();
-        gui.add(controls, "rotate");
-        gui.add(controls, "showVideo").onChange(controls.showCanvas);
+        gui.add(controls, "rotate").name("вращать | rotate");
+        gui.add(controls, "showVideo").name("показатьВидео | showVideo").onChange(controls.showCanvas);
 
 
         render();

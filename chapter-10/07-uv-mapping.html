@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 10.07 - UV mapping </title>
+    <title>Пример 10.07 - UV-наложение | Example 10.07 - UV mapping</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/OBJLoader.js"></script>
 
@@ -115,8 +115,8 @@
         }
 
         var gui = new dat.GUI();
-        gui.add(controls, 'loadCube1');
-        gui.add(controls, 'loadCube2');
+        gui.add(controls, 'loadCube1').name('загрузитьКуб1 | loadCube1');
+        gui.add(controls, 'loadCube2').name('загрузитьКуб2 | loadCube2');
         var mesh;
 
         controls.loadCube1();

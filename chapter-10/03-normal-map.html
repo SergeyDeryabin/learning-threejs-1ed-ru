@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 10.03 - Normal maps</title>
+    <title>Пример 10.03 - Карты нормалей | Example 10.03 - Normal maps</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -124,12 +124,11 @@ $(function () {
             sphere2.material.normalScale.set(e, e);
         }
     };
-
-
+    
     var gui = new dat.GUI();
-    gui.add(controls, "normalScale", -2, 2).onChange(controls.updateBump);
-    gui.add(controls, "changeTexture", ['plaster', 'bathroom', 'metal-floor']).onChange(controls.changeTexture);
-    gui.add(controls, "rotate");
+    gui.add(controls, "normalScale", -2, 2).name("нормальМасштаб | normalScale").onChange(controls.updateBump);
+    gui.add(controls, "changeTexture", ['plaster', 'bathroom', 'metal-floor']).name("изменТекстуру | changeTexture").onChange(controls.changeTexture);
+    gui.add(controls, "rotate").name("вращать | rotate");
 
 
     render();
