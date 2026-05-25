@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 11.04 - Shader Pass simple</title>
+    <title>Пример 11.04 - Проход Простого шейдера | Example 11.04 - Shader Pass simple</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -254,55 +254,55 @@ $(function () {
 
         this.switchShader = function () {
             switch (controls.select) {
-                case 'none' :
+                case 'нет | none' :
                 {
                     enableShader();
                     break;
                 }
 
-                case 'colorify' :
+                case 'раскрасить | colorify' :
                 {
                     enableShader(colorify);
                     break;
                 }
 
-                case 'brightness' :
+                case 'яркость | brightness' :
                 {
                     enableShader(brightness);
                     break;
                 }
 
-                case 'sepia' :
+                case 'сепия | sepia' :
                 {
                     enableShader(sepia);
                     break;
                 }
 
-                case 'colorCorrection' :
+                case 'цветоКоррекция | colorCorrection' :
                 {
                     enableShader(colorCorrection);
                     break;
                 }
 
-                case 'rgbShift' :
+                case 'rgbСдвиг | rgbShift' :
                 {
                     enableShader(rgbShift);
                     break;
                 }
 
-                case 'mirror' :
+                case 'зеркало | mirror' :
                 {
                     enableShader(mirror);
                     break;
                 }
 
-                case 'vignette' :
+                case 'виньетка | vignette' :
                 {
                     enableShader(vignette);
                     break;
                 }
 
-                case 'hueAndSaturation' :
+                case 'оттенокИнасыщенность | hueAndSaturation' :
                 {
                     enableShader(hue);
                     break;
@@ -361,17 +361,17 @@ $(function () {
 
     var gui = new dat.GUI();
 
-    gui.add(controls, "select", ['none', "colorify", 'brightness', 'sepia', 'colorCorrection', 'rgbShift', 'mirror', 'vignette', 'hueAndSaturation']).onChange(controls.switchShader);
-    gui.add(controls, "rotate");
+    gui.add(controls, "select", ['нет | none', "раскрасить | colorify", 'яркость | brightness', 'сепия | sepia', 'цветоКоррекция | colorCorrection', 'rgbСдвиг | rgbShift', 'зеркало | mirror', 'виньетка | vignette', 'оттенокИнасыщенность | hueAndSaturation']).name("выбрать | select").onChange(controls.switchShader);
+    gui.add(controls, "rotate").name("вращать | rotate");
 
-    var bnFolder = gui.addFolder("Brightness");
-    bnFolder.add(controls, "brightness", -1, 1).onChange(controls.changeBrightness);
-    bnFolder.add(controls, "contrast", -1, 1).onChange(controls.changeBrightness);
+    var bnFolder = gui.addFolder("Яркость | Brightness");
+    bnFolder.add(controls, "brightness", -1, 1).name("яркость | brightness").onChange(controls.changeBrightness);
+    bnFolder.add(controls, "contrast", -1, 1).name("контраст | contrast").onChange(controls.changeBrightness);
 
-    var clFolder = gui.addFolder("Colorify");
-    clFolder.addColor(controls, "color").onChange(controls.changeColor);
+    var clFolder = gui.addFolder("Раскрасить | Colorify");
+    clFolder.addColor(controls, "color").name("цвет | color").onChange(controls.changeColor);
 
-    var colFolder = gui.addFolder('Color Correction');
+    var colFolder = gui.addFolder('Цветокоррекция | Color Correction');
     colFolder.add(controls, "powRGB_R", 0, 5).onChange(controls.changeCorrection);
     colFolder.add(controls, "powRGB_G", 0, 5).onChange(controls.changeCorrection);
     colFolder.add(controls, "powRGB_B", 0, 5).onChange(controls.changeCorrection);
@@ -379,23 +379,23 @@ $(function () {
     colFolder.add(controls, "mulRGB_G", 0, 5).onChange(controls.changeCorrection);
     colFolder.add(controls, "mulRGB_B", 0, 5).onChange(controls.changeCorrection);
 
-    var sepiaFolder = gui.addFolder("Sepia");
-    sepiaFolder.add(controls, "amount", 0, 2).step(0.1).onChange(controls.changeSepia);
+    var sepiaFolder = gui.addFolder("Сепия | Sepia");
+    sepiaFolder.add(controls, "amount", 0, 2).name("значение | amount").step(0.1).onChange(controls.changeSepia);
 
-    var shiftFolder = gui.addFolder("RGB Shift");
-    shiftFolder.add(controls, "rgbAmount", 0, 0.1).step(0.001).onChange(controls.changeRGBShifter);
-    shiftFolder.add(controls, "angle", 0, 3.14).step(0.001).onChange(controls.changeRGBShifter);
+    var shiftFolder = gui.addFolder("RGB Сдвиг | RGB Shift");
+    shiftFolder.add(controls, "rgbAmount", 0, 0.1).name("rgbЗначение | rgbAmount").step(0.001).onChange(controls.changeRGBShifter);
+    shiftFolder.add(controls, "angle", 0, 3.14).name("угол | angle").step(0.001).onChange(controls.changeRGBShifter);
 
-    var mirrorFolder = gui.addFolder("mirror");
-    mirrorFolder.add(controls, "side", 0, 3).step(1).onChange(controls.changeMirror);
+    var mirrorFolder = gui.addFolder("зеркало | mirror");
+    mirrorFolder.add(controls, "side", 0, 3).name("сторона | side").step(1).onChange(controls.changeMirror);
 
-    var vignetteFolder = gui.addFolder("vignette");
-    vignetteFolder.add(controls, "darkness", 0, 2).onChange(controls.changeVignette);
-    vignetteFolder.add(controls, "offset", 0, 2).onChange(controls.changeVignette);
+    var vignetteFolder = gui.addFolder("виньетка | vignette");
+    vignetteFolder.add(controls, "darkness", 0, 2).name("темнота | darkness").onChange(controls.changeVignette);
+    vignetteFolder.add(controls, "offset", 0, 2).name("смещение | offset").onChange(controls.changeVignette);
 
-    var hueAndSat = gui.addFolder("hue and saturation");
-    hueAndSat.add(controls, "hue", -1, 1).step(0.01).onChange(controls.changeHue);
-    hueAndSat.add(controls, "saturation", -1, 1).step(0.01).onChange(controls.changeHue);
+    var hueAndSat = gui.addFolder("оттенок и насыщенность | hue and saturation");
+    hueAndSat.add(controls, "hue", -1, 1).name("оттенок | hue").step(0.01).onChange(controls.changeHue);
+    hueAndSat.add(controls, "saturation", -1, 1).name("насыщенность | saturation").step(0.01).onChange(controls.changeHue);
 
     render();
 

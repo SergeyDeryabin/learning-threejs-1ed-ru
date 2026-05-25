@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Example 11.01 - Effect composings</title>
+    <title>Пример 11.01 - Композиции эффектов | Example 11.01 - Effect composings</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -107,10 +107,10 @@
 
 
         var gui = new dat.GUI();
-        gui.add(controls, "scanlinesIntensity", 0, 1).onChange(controls.updateEffectFilm);
-        gui.add(controls, "noiseIntensity", 0, 3).onChange(controls.updateEffectFilm);
-        gui.add(controls, "grayscale").onChange(controls.updateEffectFilm);
-        gui.add(controls, "scanlinesCount", 0, 2048).step(1).onChange(controls.updateEffectFilm);
+        gui.add(controls, "scanlinesIntensity", 0, 1).name("строкиСканИнтенсив | scanlinesIntensity").onChange(controls.updateEffectFilm);
+        gui.add(controls, "noiseIntensity", 0, 3).name("шумИнтенсив | noiseIntensity").onChange(controls.updateEffectFilm);
+        gui.add(controls, "grayscale").name("оттенки серого | grayscale").onChange(controls.updateEffectFilm);
+        gui.add(controls, "scanlinesCount", 0, 2048).name("строкиСканКоличество | scanlinesCount").step(1).onChange(controls.updateEffectFilm);
 
         // call the render function
         var step = 0;

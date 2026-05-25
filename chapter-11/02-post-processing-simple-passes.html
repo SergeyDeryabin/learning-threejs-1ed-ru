@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Example 11.02 - Simple passes</title>
+    <title>Пример 11.02 - Простые проходы | Example 11.02 - Simple passes</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -182,24 +182,23 @@ $(function () {
 
     var gui = new dat.GUI();
 
-    var bpFolder = gui.addFolder("BloomPass");
-    bpFolder.add(controls, "strength", 1, 10).onChange(controls.updateEffectBloom);
-    bpFolder.add(controls, "kernelSize", 1, 100).onChange(controls.updateEffectBloom);
-    bpFolder.add(controls, "sigma", 1, 10).onChange(controls.updateEffectBloom);
-    bpFolder.add(controls, "resolution", 0, 1024).onChange(controls.updateEffectBloom);
+    var bpFolder = gui.addFolder("СвечениеПроход | BloomPass");
+    bpFolder.add(controls, "strength", 1, 10).name("сила | strength").onChange(controls.updateEffectBloom);
+    bpFolder.add(controls, "kernelSize", 1, 100).name("размерЯдра | kernelSize").onChange(controls.updateEffectBloom);
+    bpFolder.add(controls, "sigma", 1, 10).name("сигма | sigma").onChange(controls.updateEffectBloom);
+    bpFolder.add(controls, "resolution", 0, 1024).name("разрешение | resolution").onChange(controls.updateEffectBloom);
 
+    var fpFolder = gui.addFolder("ФильмПроход | FilmPass");
+    fpFolder.add(controls, "scanlinesIntensity", 0, 1).name("строкиСканИнтенсив | scanlinesIntensity").onChange(controls.updateEffectFilm);
+    fpFolder.add(controls, "noiseIntensity", 0, 3).name("шумИнтенсив | noiseIntensity").onChange(controls.updateEffectFilm);
+    fpFolder.add(controls, "grayscale").name("оттенки серого | grayscale").onChange(controls.updateEffectFilm);
+    fpFolder.add(controls, "scanlinesCount", 0, 2048).name("строкиСканКоличество | scanlinesCount").step(1).onChange(controls.updateEffectFilm);
 
-    var fpFolder = gui.addFolder("FilmPass");
-    fpFolder.add(controls, "scanlinesIntensity", 0, 1).onChange(controls.updateEffectFilm);
-    fpFolder.add(controls, "noiseIntensity", 0, 3).onChange(controls.updateEffectFilm);
-    fpFolder.add(controls, "grayscale").onChange(controls.updateEffectFilm);
-    fpFolder.add(controls, "scanlinesCount", 0, 2048).step(1).onChange(controls.updateEffectFilm);
-
-    var dsFolder = gui.addFolder("DotScreenPass");
-    dsFolder.add(controls, "centerX", 0, 1).onChange(controls.updateDotScreen);
-    dsFolder.add(controls, "centerY", 0, 1).onChange(controls.updateDotScreen);
-    dsFolder.add(controls, "angle", 0, 3.14).onChange(controls.updateDotScreen);
-    dsFolder.add(controls, "scale", 0, 10).onChange(controls.updateDotScreen);
+    var dsFolder = gui.addFolder("ЭкранТочекПроход | DotScreenPass");
+    dsFolder.add(controls, "centerX", 0, 1).name("центрX | centerX").onChange(controls.updateDotScreen);
+    dsFolder.add(controls, "centerY", 0, 1).name("центрY | centerY").onChange(controls.updateDotScreen);
+    dsFolder.add(controls, "angle", 0, 3.14).name("угол | angle").onChange(controls.updateDotScreen);
+    dsFolder.add(controls, "scale", 0, 10).name("шкала | scale").onChange(controls.updateDotScreen);
 
 
     // call the render function
