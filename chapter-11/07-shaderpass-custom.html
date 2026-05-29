@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Example 11.07 - custom shaderpass</title>
+    <title>Пример 11.07 - Проход Нестандартного шейдера | Example 11.07 - Custom shaderpass</title>
     <script type="text/javascript" src="../libs/three.js"></script>
     <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="../libs/stats.js"></script>
@@ -131,15 +131,15 @@
 
 
         var gui = new dat.GUI();
-        var grayMenu = gui.addFolder('gray scale');
-        grayMenu.add(controls, 'grayScale').onChange(controls.updateEffectFilm);
-        grayMenu.add(controls, 'rPower', 0, 1).onChange(controls.updateEffectFilm);
-        grayMenu.add(controls, 'gPower', 0, 1).onChange(controls.updateEffectFilm);
-        grayMenu.add(controls, 'bPower', 0, 1).onChange(controls.updateEffectFilm);
+        var grayMenu = gui.addFolder('шкала серого | gray scale');
+        grayMenu.add(controls, 'grayScale').name('Шкала серого | grayScale').onChange(controls.updateEffectFilm);
+        grayMenu.add(controls, 'rPower', 0, 1).name('rCила | rPower').onChange(controls.updateEffectFilm);
+        grayMenu.add(controls, 'gPower', 0, 1).name('gCила | gPower').onChange(controls.updateEffectFilm);
+        grayMenu.add(controls, 'bPower', 0, 1).name('bCила | bPower').onChange(controls.updateEffectFilm);
 
-        var bitMenu = gui.addFolder('bit');
-        bitMenu.add(controls, 'bitShader').onChange(controls.updateBit);
-        bitMenu.add(controls, 'bitSize', 2, 24).step(1).onChange(controls.updateBit);
+        var bitMenu = gui.addFolder('разряд | bit');
+        bitMenu.add(controls, 'bitShader').name('разрядШейдер | bitShader').onChange(controls.updateBit);
+        bitMenu.add(controls, 'bitSize', 2, 24).name('разрядРазмер | bitSize').step(1).onChange(controls.updateBit);
 
         // call the render function
         var step = 0;

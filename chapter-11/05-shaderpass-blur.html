@@ -192,15 +192,15 @@
         };
 
         var gui = new dat.GUI();
-        gui.add(controls, 'hBlur').onChange(controls.onChange);
-        gui.add(controls, 'vBlur').onChange(controls.onChange);
-        gui.add(controls, 'hTilt').onChange(controls.onChange);
-        gui.add(controls, 'hTiltR', 0, 1).onChange(controls.onChange);
-        gui.add(controls, 'vTilt').onChange(controls.onChange);
-        gui.add(controls, 'vTiltR', 0, 1).onChange(controls.onChange);
-        gui.add(controls, 'triBlur').onChange(controls.onChange);
-        gui.add(controls, 'deltaX', 0, 0.05).step(0.001).onChange(controls.onChange);
-        gui.add(controls, 'deltaY', 0, 0.05).step(0.001).onChange(controls.onChange);
+        gui.add(controls, 'hBlur').name('гороизРазмытие | hBlur').onChange(controls.onChange);
+        gui.add(controls, 'vBlur').name('вертикРазмытие | vBlur').onChange(controls.onChange);
+        gui.add(controls, 'hTilt').name('гороизНаклон | hTilt').onChange(controls.onChange);
+        gui.add(controls, 'hTiltR', 0, 1).name('гороизНаклонR | hTiltR').onChange(controls.onChange);
+        gui.add(controls, 'vTilt').name('вертикНаклон | vTilt').onChange(controls.onChange);
+        gui.add(controls, 'vTiltR', 0, 1).name('вертикНаклонR | vTiltR').onChange(controls.onChange);
+        gui.add(controls, 'triBlur').name('треуголРазмытие | triBlur').onChange(controls.onChange);
+        gui.add(controls, 'deltaX', 0, 0.05).name('дельтаX | deltaX').step(0.001).onChange(controls.onChange);
+        gui.add(controls, 'deltaY', 0, 0.05).name('дельтаY | deltaY').step(0.001).onChange(controls.onChange);
 
 
         render();

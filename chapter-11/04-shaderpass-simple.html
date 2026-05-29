@@ -62,7 +62,7 @@ $(function () {
     webGLRenderer.shadowMapEnabled = true;
 
 
-//        // position and point the camera to the center of the scene
+    // position and point the camera to the center of the scene
     camera.position.x = 20;
     camera.position.y = 30;
     camera.position.z = 40;
@@ -180,8 +180,8 @@ $(function () {
         scene.add(object);
     });
 
-// https://sergeyderyabin.github.io/learning-threejs-1ed-ru/assets/models/sol/libertStatue.mtl
-    // loader.load('https://sergeyderyabin.github.io/learning-threejs-1ed-ru/assets/models/sol/libertStatue.obj', 'https://sergeyderyabin.github.io/learning-threejs-1ed-ru/assets/models/sol/libertStatue.mtl');
+
+    loader.load('../assets/models/sol/libertStatue.obj', '../assets/models/sol/libertStatue.mtl');
 
     var mirror = new THREE.ShaderPass(THREE.MirrorShader);
     mirror.enabled = false;
