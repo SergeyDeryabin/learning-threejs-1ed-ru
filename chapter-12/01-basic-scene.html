@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Rigid body - Physijs</title>
+    <title>Пример 12.01 - Базовая сцена | Example 12.01 - Basic Scene</title>
 
 
     <script type="text/javascript" src="../libs/three.js"></script>
@@ -117,10 +117,10 @@
             }
 
             var gui = new dat.GUI();
-            gui.add(controls, 'gravityX', -100, 100);
-            gui.add(controls, 'gravityY', -100, 100);
-            gui.add(controls, 'gravityZ', -100, 100);
-            gui.add(controls, 'resetScene');
+            gui.add(controls, 'gravityX', -100, 100).name('сила тяжестиX | gravityX');
+            gui.add(controls, 'gravityY', -100, 100).name('сила тяжестиY | gravityY');
+            gui.add(controls, 'gravityZ', -100, 100).name('сила тяжестиZ | gravityZ');
+            gui.add(controls, 'resetScene').name('сбросСцены | resetScene');
 
             controls.resetScene();
         };

@@ -12,7 +12,7 @@
     }
 </style>
 
-<title>Physijs shapes</title>
+<title>Пример 12.03 - Формы | Example 12.03 - Shapes</title>
 
 <script type="text/javascript" src="../libs/three.js"></script>
 <script type="text/javascript" src="../libs/stats.js"></script>
@@ -186,14 +186,14 @@ initScene = function () {
     }
 
     var gui = new dat.GUI();
-    gui.add(controls, 'addPlaneMesh');
-    gui.add(controls, 'addBoxMesh');
-    gui.add(controls, 'addSphereMesh');
-    gui.add(controls, 'addCylinderMesh');
-    gui.add(controls, 'addConeMesh');
-    gui.add(controls, 'addCapsuleMesh');
-    gui.add(controls, 'addConvexMesh');
-    gui.add(controls, 'clearMeshes');
+    gui.add(controls, 'addPlaneMesh').name('добавитьПлоскостьМешь | addPlaneMesh');
+    gui.add(controls, 'addBoxMesh').name('добавитьБоксМешь | addBoxMesh');
+    gui.add(controls, 'addSphereMesh').name('добавитьСфераМешь | addSphereMesh');
+    gui.add(controls, 'addCylinderMesh').name('добавитьЦилиндрМешь | addCylinderMesh');
+    gui.add(controls, 'addConeMesh').name('добавитьКонусМешь | addConeMesh');
+    gui.add(controls, 'addCapsuleMesh').name('добавитьКапсулаМешь | addCapsuleMesh');
+    gui.add(controls, 'addConvexMesh').name('добавитьВыпуклостьМешь | addConvexMesh');
+    gui.add(controls, 'clearMeshes').name('очиститьМеши | clearMeshes');
 
     var date = new Date();
     var pn = new Perlin('rnd' + date.getTime());

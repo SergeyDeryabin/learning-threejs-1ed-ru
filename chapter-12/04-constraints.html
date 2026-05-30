@@ -12,7 +12,7 @@
     }
 </style>
 
-<title>Physijs Constraints</title>
+<title>Пример 12.04 - Ограничения | Example 12.04 - Constraints</title>
 
 <script type="text/javascript" src="../libs/three.js"></script>
 <script type="text/javascript" src="../libs/stats.js"></script>
@@ -185,26 +185,26 @@ initScene = function () {
     gui.domElement.style.top = '20px';
     gui.domElement.style.left = '20px';
 
-    var generalFolder = gui.addFolder('general');
-    generalFolder.add(controls, "acceleration", 0, 15).onChange(controls.updateMotor);
-    generalFolder.add(controls, "velocity", -10, 10).onChange(controls.updateMotor);
+    var generalFolder = gui.addFolder('общее | general');
+    generalFolder.add(controls, "acceleration", 0, 15).name("ускорение | acceleration").onChange(controls.updateMotor);
+    generalFolder.add(controls, "velocity", -10, 10).name("скорость | velocity").onChange(controls.updateMotor);
 
-    var hingeFolder = gui.addFolder('hinge');
-    hingeFolder.add(controls, "enableMotor").onChange(controls.updateMotor);
+    var hingeFolder = gui.addFolder('стержень | hinge');
+    hingeFolder.add(controls, "enableMotor").name("включитьМотор | enableMotor").onChange(controls.updateMotor);
 
-    var sliderFolder = gui.addFolder('sliders');
-    sliderFolder.add(controls, "sliderLeft").onChange(controls.sliderLeft);
-    sliderFolder.add(controls, "sliderRight").onChange(controls.sliderRight);
+    var sliderFolder = gui.addFolder('ползунки | sliders');
+    sliderFolder.add(controls, "sliderLeft").name("ползтиНалево | sliderLeft").onChange(controls.sliderLeft);
+    sliderFolder.add(controls, "sliderRight").name("ползтиНаправо | sliderRight").onChange(controls.sliderRight);
 
-    var coneTwistFolder = gui.addFolder('coneTwist');
-    coneTwistFolder.add(controls, "enableConeTwistMotor").onChange(controls.updateCone);
-    coneTwistFolder.add(controls, "motorTargetX", -Math.PI / 2, Math.PI / 2).onChange(controls.updateCone);
-    coneTwistFolder.add(controls, "motorTargetY", -Math.PI / 2, Math.PI / 2).onChange(controls.updateCone);
-    coneTwistFolder.add(controls, "motorTargetZ", -Math.PI / 2, Math.PI / 2).onChange(controls.updateCone);
+    var coneTwistFolder = gui.addFolder('конусТвист | coneTwist');
+    coneTwistFolder.add(controls, "enableConeTwistMotor").name("включитьКонусТвистМотор | enableConeTwistMotor").onChange(controls.updateCone);
+    coneTwistFolder.add(controls, "motorTargetX", -Math.PI / 2, Math.PI / 2).name("движенЦельX | motorTargetX").onChange(controls.updateCone);
+    coneTwistFolder.add(controls, "motorTargetY", -Math.PI / 2, Math.PI / 2).name("движенЦельY | motorTargetY").onChange(controls.updateCone);
+    coneTwistFolder.add(controls, "motorTargetZ", -Math.PI / 2, Math.PI / 2).name("движенЦельZ | motorTargetZ").onChange(controls.updateCone);
 
-    var spheresFolder = gui.addFolder('spheres');
-    spheresFolder.add(controls, "clearMeshes").onChange(controls.updateMotor);
-    spheresFolder.add(controls, "addSpheres").onChange(controls.updateMotor);
+    var spheresFolder = gui.addFolder('сферы | spheres');
+    spheresFolder.add(controls, "clearMeshes").name("очиститьМеши | clearMeshes").onChange(controls.updateMotor);
+    spheresFolder.add(controls, "addSpheres").name("добавитьСферы | addSpheres").onChange(controls.updateMotor);
 
 
     requestAnimationFrame(render);

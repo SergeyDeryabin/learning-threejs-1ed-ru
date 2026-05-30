@@ -12,7 +12,7 @@
     }
 </style>
 
-<title>Physijs Constraints</title>
+<title>Пример 12.05 - Ограничение глубины резкости | Example 12.05 - Dof Constraint</title>
 
 <script type="text/javascript" src="../libs/three.js"></script>
 <script type="text/javascript" src="../libs/stats.js"></script>
@@ -117,10 +117,10 @@ initScene = function () {
     };
 
     var gui = new dat.GUI();
-    gui.add(controls, 'velocity', -10, 10).onChange(controls.changeVelocity);
-    gui.add(controls, 'wheelAngle', -1, 1).onChange(controls.changeOrientation);
-    gui.add(controls, 'loosenXRight', 0, 0.5).step(0.01).onChange(controls.changeOrientation);
-    gui.add(controls, 'loosenXLeft', 0, 0.6).step(-0.01).onChange(controls.changeOrientation);
+    gui.add(controls, 'velocity', -10, 10).name('скорость | velocity').onChange(controls.changeVelocity);
+    gui.add(controls, 'wheelAngle', -1, 1).name('колесоУгол | wheelAngle').onChange(controls.changeOrientation);
+    gui.add(controls, 'loosenXRight', 0, 0.5).name('ослабьXНаправо | loosenXRight').step(0.01).onChange(controls.changeOrientation);
+    gui.add(controls, 'loosenXLeft', 0, 0.6).name('ослабьXНалево | loosenXLeft').step(-0.01).onChange(controls.changeOrientation);
     controls.loosenXLeft = 0;
     controls.loosenXRight = 0;
 

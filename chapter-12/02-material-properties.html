@@ -3,7 +3,7 @@
 <html>
 
 <head>
-<title>Rigid body - Physijs</title>
+<title>Пример 12.02 - Свойства материала | Example 12.02 - Material Properties</title>
 
 
 <script type="text/javascript" src="../libs/three.js"></script>
@@ -233,13 +233,13 @@ initScene = function () {
     }
 
     var gui = new dat.GUI();
-    gui.add(controls, 'cubeRestitution', 0, 1);
-    gui.add(controls, 'cubeFriction', 0, 1);
-    gui.add(controls, 'sphereRestitution', 0, 1);
-    gui.add(controls, 'sphereFriction', 0, 1);
-    gui.add(controls, 'addCubes');
-    gui.add(controls, 'addSpheres');
-    gui.add(controls, 'clearMeshes');
+    gui.add(controls, 'cubeRestitution', 0, 1).name('Реституция куба | cubeRestitution');
+    gui.add(controls, 'cubeFriction', 0, 1).name('Трение куба | cubeFriction');
+    gui.add(controls, 'sphereRestitution', 0, 1).name('Реституция сферы | sphereRestitution');
+    gui.add(controls, 'sphereFriction', 0, 1).name('Трение сферы | sphereFriction');
+    gui.add(controls, 'addCubes').name('добавитьКубы | addCubes');
+    gui.add(controls, 'addSpheres').name('добавитьСферы | addSpheres');
+    gui.add(controls, 'clearMeshes').name('очиститьМеши | clearMeshes');
 
     requestAnimationFrame(render);
     scene.simulate();
